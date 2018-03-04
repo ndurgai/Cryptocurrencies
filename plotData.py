@@ -1,17 +1,15 @@
-# Last Updated: 05/07. This module contains functions whjch plot time series and VaR data.
-
 import matplotlib.pyplot as plt
 import scipy.stats as st
 import numpy as np
 
-# Plot all of the columns of the time series
 def plotSeries(mydata):
+    """Plot all of the columns of the time series """
     plt.plot(mydata)
     plt.grid()
     plt.show()
 
-# Plot the Open price of the time series
 def plotOpen(mydata):
+    """Plot the Open price of the time series """
     plt.plot(mydata['Open'])
     plt.show()
 
@@ -21,8 +19,9 @@ def plotBitcoinSeries(mydata, series):
     plt.legend(series)
     plt.show()
 
-# Plots a histogram of the data with the normal distribution. Default number of bins is 100
 def compareNorm(mydata, series, binsize):
+    """Plots a histogram of the data with the normal distribution. Default number of bins is 100 """
+
     # Fit a normal distribution to the data:
     mydata2 = np.array(mydata)
     mu, std = st.norm.fit(mydata2)
