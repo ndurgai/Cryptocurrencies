@@ -9,7 +9,6 @@ from pandas.tseries.offsets import BDay # BDay is business day
 # Allows more than 50 data requests per day from Quandl
 quandl.ApiConfig.api_key = ""
 
-
 def readQuandl(derivativelist, lookback, returns):
     """# Reads time series and obtains daily returns if desired for specified derivatives on Quandl """
     today = pd.datetime.today()
@@ -21,7 +20,6 @@ def readQuandl(derivativelist, lookback, returns):
                             transformation = 'rdiff') #, rows = lookback
     else: mydata = quandl.get(derivativelist, start_date = start, end_date = today) #, rows = lookback
     return mydata
-
 
 def cleanData(mydata):
     """Zero's are assumed to be missing values, and are replaced with NaN. Missing data is filled in using linear

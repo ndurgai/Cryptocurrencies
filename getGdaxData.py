@@ -20,8 +20,8 @@ def getHistoricGdaxData(currencies, starttime, endtime, granularity):
 # This script below reads and saves data from gdax over a 3 day history with an hourly frequency
 
 currencies = ['ETH-EUR', 'BTC-EUR', 'ETH-BTC']
-startime = '2018-02-27T15:00:01'
-endtime = '2018-03-02T15:00:01'
+startime = '2018-03-02T15:00:01'
+endtime = '2018-03-05T15:00:01'
 granularity= '3600'
 getHistoricGdaxData(currencies, startime, endtime, granularity)
 
